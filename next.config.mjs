@@ -9,16 +9,15 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: [
-      
-      'i.ibb.co', 
-      'i.ibb.co.com',
-      'readymadeui.com',
-      'source.unsplash.com',
-      'loremflickr.com'
-  ],
-  },
+   images: {
+        remotePatterns: [{
+            protocol: 'http',
+            hostname: '*',
+        }, {
+            protocol: 'https',
+            hostname: '*',
+        }, ],
+    },
 };
 
 export default nextConfig;

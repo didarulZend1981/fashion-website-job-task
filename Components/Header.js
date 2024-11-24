@@ -60,9 +60,9 @@ const Navbar = () => {
            alt="logo" 
            width={144} height={36}
            className="w-8 md:w-full" />
-          <span className="text-2xl md:text-4xl text-black font-bold">
-            We<span className="text-[#7436F1]">5</span>ive
-          </span>
+
+          
+
         </a>
         {/* toggle menubar for md and mobile devices */}
         <div
