@@ -1,7 +1,13 @@
-export default function AddToCartButton({ text = "Add to Cart", className = "" }) {
+export default function AddToCartButton({ label = "Add to Cart", className = "", onClick }) {
   return (
-    <button className={`${className}`}>
-      {text}
+    <button 
+      onClick={onClick}
+      className={`${className}`}
+
+
+
+      >
+      {label}
     </button>
   );
 }

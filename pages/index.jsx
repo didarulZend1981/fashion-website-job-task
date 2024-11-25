@@ -5,6 +5,7 @@ import BannerStats from '../components/BannerStats';
 import FeaturedProduct from '../components/FeaturedProduct';
 import BigDeal from '../components/BigDeal';
 import ManCollection from '../components/ManCollection';
+import SummerBigDeal from '../components/SummerBigDeal';
 
 
 import Footer from '../components/Footer';
@@ -21,6 +22,7 @@ export default function Home() {
       <FeaturedProduct/>
       <BigDeal/>
       <ManCollection />
+      <SummerBigDeal/>
             
 
 

@@ -1,0 +1,111 @@
+[
+  {
+    "productId": "P001",
+    "image": "/images/1.png",
+    "productName": "Indian Sari",
+    "description": "High-quality wireless headphones with noise-canceling feature and up to 20 hours of playtime.",
+    "rating": 3,
+    "comment":50,
+    "price": "BDT 2,500"
+  },
+  {
+    "productId": "P002",
+    "image": "/images/2.jpg",
+    "productName": "Hoodie",
+    "description": "A sleek and stylish smartwatch that tracks fitness, heart rate, and sleep patterns.",
+    "rating": 4,
+    "comment":40,
+    "price": "BDT 4,000"
+  },
+  {
+    "productId": "P003",
+    "image": "/images/3.png",
+    "productName": "Plazu",
+    "description": "Burr-style electric coffee grinder for freshly ground coffee beans with customizable grind sizes.",
+    "rating": 5,
+    "comment":30,
+    "price": "BDT 1,800"
+  },
+  {
+    "productId": "P004",
+    "image": "/images/4.png",
+    "productName": "Jacket",
+    "description": "A modern LED desk lamp with adjustable brightness and color temperature settings.",
+    "rating": 4,
+    "comment":40,
+    "price": "BDT 2,000"
+  },
+  {
+    "productId": "P005",
+    "image": "/images/image3.png",
+    "productName": "Kamiz",
+    "description": "A rugged and waterproof Bluetooth speaker with clear sound and deep bass for outdoor adventures.",
+    "rating": 5,
+    "comment":80,
+    "price": "BDT 3,200"
+  },
+  {
+    "productId": "P006",
+    "image": "/images/image4.png",
+    "productName": "Half Sleeve Shirt",
+    "description": "Sonic-powered toothbrush with multiple cleaning modes for superior plaque removal and gum care.",
+    "rating": 4,
+    "comment":90,
+    "price": "BDT 1,500"
+  },
+  {
+    "productId": "P007",
+    "image": "/images/image5.png",
+    "productName": "Woman wearing sari",
+    "description": "Lightweight and powerful cordless vacuum for deep cleaning carpets and hard floors.",
+    "rating": 3,
+    "comment":40,
+    "price": "BDT 6,000"
+  },
+  {
+    "productId": "P008",
+    "image": "/images/image6.png",
+    "productName": "Checkered shirt",
+    "description": "1080p HD security camera with motion detection and night vision for indoor use.",
+    "rating": 4,
+    "comment":30,
+
+    "price": "BDT 2,800"
+  },
+  {
+    "productId": "P009",
+    "image": "/images/image3.png",
+    "productName": "Indian Kamiz",
+    "description": "A 500ml vacuum-insulated stainless steel bottle that keeps drinks hot or cold for up to 12 hours.",
+    "rating": 5,
+    "comment":250,
+    "price": "BDT 1,200"
+  },
+  {
+    "productId": "P010",
+    "image": "/images/image4.png",
+    "productName": "Half Sleeve Shirt",
+    "description": "Ergonomically designed memory foam pillow that provides excellent support for neck and spine alignment.",
+    "rating": 4,
+    "comment":50,
+    "price": "BDT 1,600"
+  },
+  {
+    "productId": "P011",
+    "image": "/images/image5.png",
+    "productName": "Woman wearing sari",
+    "description": "Multi-functional electric pressure cooker with slow cooking, rice cooking, and yogurt making options.",
+    "rating": 3,
+    "comment":60,
+    "price": "BDT 4,500"
+  },
+  {
+    "productId": "P012",
+    "image": "/images/image6.png",
+    "productName": "Checkered shirt",
+    "description": "Eco-friendly, non-slip yoga mat with extra cushioning for improved comfort during your practice.",
+    "rating": 4,
+    "comment":50,
+    "price": "BDT 900"
+  }
+]
