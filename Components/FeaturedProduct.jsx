@@ -43,7 +43,12 @@ const FeaturedProduct = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {productsToDisplay.map((product, index) => (
-                    <FeatureCard key={index} product={product} className="bg-gray-50" />
+                    <FeatureCard key={index} product={product} 
+                    className="bg-white" 
+                    // OfferBadge="true" 
+                    // rating="true" 
+
+                    />
                   ))}
            
             </div>

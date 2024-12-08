@@ -7,7 +7,8 @@ import { CiSearch } from "react-icons/ci";
 import Image from 'next/image'
 import Link from "next/link";
 
-const Navbar = () => {
+
+export default function Header (){
   useEffect(() => {
     const toggleOpen = document.getElementById("toggleOpen");
     const toggleClose = document.getElementById("toggleClose");
@@ -128,4 +129,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+

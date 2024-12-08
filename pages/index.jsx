@@ -1,14 +1,17 @@
+import Banner from "@/Components/Banner";
+import BannerStats from "@/Components/BannerStats";
+import BigDeal from "@/Components/BigDeal";
+import FeaturedProduct from "@/Components/FeaturedProduct";
+import Footer from "@/Components/Footer";
+import Header from "@/Components/Header";
+import ManCollection from "@/Components/ManCollection";
+import SummerBigDeal from "@/Components/SummerBigDeal";
 
-import Header from '../components/Header';
-import Banner from '../components/Banner';
-import BannerStats from '../components/BannerStats';
-import FeaturedProduct from '../components/FeaturedProduct';
-import BigDeal from '../components/BigDeal';
-import ManCollection from '../components/ManCollection';
-import SummerBigDeal from '../components/SummerBigDeal';
 
 
-import Footer from '../components/Footer';
+
+
+
 
 
 
