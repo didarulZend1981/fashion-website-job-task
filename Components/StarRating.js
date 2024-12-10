@@ -18,8 +18,6 @@ export default function StarRating({ rating }) {
 		    </div>
 		  );
 
-93041904
-D23190803(5)
-D23190803(1)
+
 
 }

@@ -3,10 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import AddToCartButton from './Button'
 import StarRating from './StarRating'
+import CartContext from "./CartContext";
+import { useContext } from "react";
 
 export default function FeatureCard({ product , className,OfferBadge,rating}) {
     
-
+  const { addToCart } = useContext(CartContext);
+  console.log(addToCart);
   
   return (
     
@@ -54,9 +57,12 @@ export default function FeatureCard({ product , className,OfferBadge,rating}) {
                             <p className="text-lg text-blue-600 font-bold">{product.price}</p>
                         </div>
                     </div>
+                    
                     <AddToCartButton
                   text="Add to cart"
                   className="w-full px-5 py-2.5 rounded-lg border border-[#7E53D4] shadow-md text-[#7E53D4] font-semibold text-[16px]"
+                  onClick={() => addToCart(product)}
+                
                 />
                       </div>
 

@@ -6,7 +6,8 @@
     "description": "High-quality wireless headphones with noise-canceling feature and up to 20 hours of playtime.",
     "rating": 3,
     "comment":50,
-    "price": "BDT 2,500"
+    "stock":20,
+    "price": 2500
   },
   {
     "productId": "P002",
@@ -15,7 +16,8 @@
     "description": "A sleek and stylish smartwatch that tracks fitness, heart rate, and sleep patterns.",
     "rating": 4,
     "comment":40,
-    "price": "BDT 4,000"
+    "stock":20,
+    "price": 4000
   },
   {
     "productId": "P003",
@@ -24,7 +26,8 @@
     "description": "Burr-style electric coffee grinder for freshly ground coffee beans with customizable grind sizes.",
     "rating": 5,
     "comment":30,
-    "price": "BDT 1,800"
+    "stock":20,
+    "price": 1800
   },
   {
     "productId": "P004",
@@ -33,7 +36,8 @@
     "description": "A modern LED desk lamp with adjustable brightness and color temperature settings.",
     "rating": 4,
     "comment":40,
-    "price": "BDT 2,000"
+    "stock":20,
+    "price": 2000
   },
   {
     "productId": "P005",
@@ -42,7 +46,8 @@
     "description": "A rugged and waterproof Bluetooth speaker with clear sound and deep bass for outdoor adventures.",
     "rating": 5,
     "comment":80,
-    "price": "BDT 3,200"
+    "stock":20,
+    "price": 3200
   },
   {
     "productId": "P006",
@@ -51,7 +56,8 @@
     "description": "Sonic-powered toothbrush with multiple cleaning modes for superior plaque removal and gum care.",
     "rating": 4,
     "comment":90,
-    "price": "BDT 1,500"
+    "stock":20,
+    "price": 1500
   },
   {
     "productId": "P007",
@@ -60,7 +66,8 @@
     "description": "Lightweight and powerful cordless vacuum for deep cleaning carpets and hard floors.",
     "rating": 3,
     "comment":40,
-    "price": "BDT 6,000"
+    "stock":20,
+    "price": 6000
   },
   {
     "productId": "P008",
@@ -69,8 +76,8 @@
     "description": "1080p HD security camera with motion detection and night vision for indoor use.",
     "rating": 4,
     "comment":30,
-
-    "price": "BDT 2,800"
+    "stock":20,
+    "price": 2800
   },
   {
     "productId": "P009",
@@ -79,7 +86,8 @@
     "description": "A 500ml vacuum-insulated stainless steel bottle that keeps drinks hot or cold for up to 12 hours.",
     "rating": 5,
     "comment":250,
-    "price": "BDT 1,200"
+    "stock":20,
+    "price": 1200
   },
   {
     "productId": "P010",
@@ -88,7 +96,8 @@
     "description": "Ergonomically designed memory foam pillow that provides excellent support for neck and spine alignment.",
     "rating": 4,
     "comment":50,
-    "price": "BDT 1,600"
+    "stock":20,
+    "price": 1600
   },
   {
     "productId": "P011",
@@ -97,7 +106,8 @@
     "description": "Multi-functional electric pressure cooker with slow cooking, rice cooking, and yogurt making options.",
     "rating": 3,
     "comment":60,
-    "price": "BDT 4,500"
+    "stock":20,
+    "price": 4500
   },
   {
     "productId": "P012",
@@ -106,6 +116,7 @@
     "description": "Eco-friendly, non-slip yoga mat with extra cushioning for improved comfort during your practice.",
     "rating": 4,
     "comment":50,
-    "price": "BDT 900"
+    "stock":20,
+    "price": 900
   }
 ]

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { RiMenu5Fill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { TbShoppingBag } from "react-icons/tb";
@@ -6,9 +6,11 @@ import { MdAccountCircle } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import Image from 'next/image'
 import Link from "next/link";
+import CartContext from "./CartContext";
 
 
 export default function Header (){
+  const { cart, removeFromCart } = useContext(CartContext);
   useEffect(() => {
     const toggleOpen = document.getElementById("toggleOpen");
     const toggleClose = document.getElementById("toggleClose");
@@ -38,20 +40,20 @@ export default function Header (){
     },
     {
       title: "Shop",
-      pathName: "/",
+      pathName: "/shop",
     },
     {
       title: "Deals",
-      pathName: "/",
+      pathName: "/deals",
     },
     {
       title: "What's New",
-      pathName: "/",
+      pathName: "/what",
     },
   ];
   return (
     <header className="bg-[#F5F3FF] py-4 sm:px-10 bg-gradient-red tracking-wide z-50 sticky top-0 z-1000">
-      <div className="lg:w-[1340px] w-full mx-auto flex items-center gap-4 justify-between px-3 lg:px-0">
+      <div className="w-full mx-auto flex items-center gap-4 justify-between px-3 lg:px-0">
         {/* logo & name */}
         <button id="toggleOpen" className="lg:hidden">
           <RiMenu5Fill className="text-2xl md:text-3xl" />
@@ -90,13 +92,10 @@ export default function Header (){
             </li>
             {navLinks.map((navLink, index) => (
               <li key={index} className="max-lg:border-b max-lg:py-3 px-3">
-                <a
-                  to={navLink?.pathName}
-                  className="text-[#646464] block font-bold transition-all"
-                >
-                  {navLink?.title}
-                </a>
-              </li>
+                <Link href={navLink?.pathName}  
+                className="text-[#646464] block font-bold transition-all">{navLink?.title}</Link>
+              
+            </li>
             ))}
           </ul>
         </div>
@@ -112,15 +111,21 @@ export default function Header (){
               />
             </div>
             <div className="flex items-center ml-6">
+              <Link href="/cart">
               <div className="flex gap-6">
                 <span className="relative">
                   <TbShoppingBag className="text-3xl relative" />
                   <span className="absolute left-auto -ml-1 top-0 -right-1 rounded-full bg-black px-1 py-0 text-xs text-[#646464]">
-                    0
+                    {
+                      cart?.length
+                    }
                   </span>
                 </span>
                 <MdAccountCircle className="text-3xl  relative" />
               </div>
+              </Link>
+
+
             </div>
           </div>
         </div>

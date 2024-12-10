@@ -1,12 +1,14 @@
 import Footer from '@/Components/Footer';
 import Header from '@/Components/Header';
 import RelatedProduct from '@/Components/RelateProduct';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa'; // For the rating star
 import { FaHeart } from 'react-icons/fa'; // For the heart icon (like)
 import { FaCartPlus } from 'react-icons/fa'; // For the cart icon
+import AddToCartButton from '@/Components/Button';
+import CartContext from '@/Components/CartContext';
 
 
 export default function ProductPage() {
@@ -15,9 +17,33 @@ export default function ProductPage() {
   
   // console.log("didarul-----------",router)
   const  productId  = router.query; // Retrieve product ID (for dynamic content)
-  console.log("didar-----id",productId);
+ 
  const [activeTab, setActiveTab] = useState('description'); // Track active tab state
  
+ const [products, setProducts] = useState([]);
+ const [filteredProducts, setFilteredProducts] = useState([]);
+
+
+ const { addToCart } = useContext(CartContext);
+
+
+
+  useEffect(() => {
+    // Fetch the product data
+    fetch("/product.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data);
+
+        // Filter products based on productId
+        const matchedProducts = data.filter(
+          (product) => product.productId === productId.id
+        );
+        setFilteredProducts(matchedProducts);
+      })
+      .catch((error) => console.error("Error fetching products:", error));
+  }, []);
+
  
 
   return (
@@ -31,8 +57,8 @@ export default function ProductPage() {
                     <div className="w-full lg:sticky top-0 text-center">
                         <div className="lg:h-[560px]">
                             <Image
-                              src="https://readymadeui.com/images/product6.webp"
-                              alt="Product"
+                              src={filteredProducts[0]?.image}
+                              alt={filteredProducts[0]?.productName}
                               className="lg:w-11/12 w-full h-full rounded-md object-cover object-top"
                               width={700} 
                               height={560}
@@ -74,7 +100,7 @@ export default function ProductPage() {
                     <div>
                         <div className="flex flex-wrap items-start gap-4">
                             <div>
-                                <h2 className="text-2xl font-bold text-gray-800">Adjective Attire | T-shirt</h2>
+                                <h2 className="text-2xl font-bold text-gray-800">{filteredProducts[0]?.productName}</h2>
                                 <p className="text-sm text-gray-500 mt-2">Well-Versed Commerce</p>
                             </div>
 
@@ -102,7 +128,7 @@ export default function ProductPage() {
 
                         <div className="flex flex-wrap gap-4 items-start">
                             <div>
-                                <p className="text-gray-800 text-4xl font-bold">$30</p>
+                                <p className="text-gray-800 text-4xl font-bold">{filteredProducts[0]?.price}</p>
                                 <p className="text-gray-500 text-sm mt-2"><strike>$42</strike> <span className="text-sm ml-1">Tax included</span></p>
                             </div>
 
@@ -162,7 +188,13 @@ export default function ProductPage() {
 
                         <div className="flex flex-wrap gap-4">
                             <button type="button" className="min-w-[200px] px-4 py-3 bg-gray-800 hover:bg-gray-900 text-white text-sm font-semibold rounded-md">Buy now</button>
-                            <button type="button" className="min-w-[200px] px-4 py-2.5 border border-gray-800 bg-transparent hover:bg-gray-50 text-gray-800 text-sm font-semibold rounded-md">Add to cart</button>
+                           
+                            <AddToCartButton
+                  text="Add to cart"
+                  className="min-w-[200px] px-4 py-2.5 border border-gray-800 bg-transparent hover:bg-gray-50 text-gray-800 text-sm font-semibold rounded-md"
+                  onClick={() => addToCart(filteredProducts[0])}
+                
+                />
                         </div>
                     </div>
                 </div>
